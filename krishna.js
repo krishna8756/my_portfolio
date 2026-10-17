@@ -19,3 +19,47 @@ if (themeToggle) {
             : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.2A8.6 8.6 0 0 1 8.8 3.8a8.7 8.7 0 1 0 11.4 11.4Z"/></svg>';
     });
 }
+
+const projectFilters = document.querySelectorAll("[data-project-filter]");
+const projectSearch = document.getElementById("project-search");
+const projectCards = document.querySelectorAll(".showcase-project");
+const projectsEmpty = document.getElementById("projects-empty");
+
+if (projectFilters.length && projectSearch && projectCards.length && projectsEmpty) {
+    let activeProjectFilter = "all";
+
+    const updateProjects = () => {
+        const searchTerm = projectSearch.value.trim().toLowerCase();
+        let visibleProjectCount = 0;
+
+        projectCards.forEach((project) => {
+            const categories = project.dataset.categories.split(/\s+/);
+            const matchesFilter = activeProjectFilter === "all"
+                || categories.includes(activeProjectFilter);
+            const matchesSearch = project.textContent.toLowerCase().includes(searchTerm)
+                || project.dataset.search.toLowerCase().includes(searchTerm);
+            const isVisible = matchesFilter && matchesSearch;
+
+            project.hidden = !isVisible;
+            visibleProjectCount += Number(isVisible);
+        });
+
+        projectsEmpty.hidden = visibleProjectCount > 0;
+    };
+
+    projectFilters.forEach((filter) => {
+        filter.addEventListener("click", () => {
+            activeProjectFilter = filter.dataset.projectFilter;
+
+            projectFilters.forEach((button) => {
+                const isActive = button === filter;
+                button.classList.toggle("is-active", isActive);
+                button.setAttribute("aria-pressed", String(isActive));
+            });
+
+            updateProjects();
+        });
+    });
+
+    projectSearch.addEventListener("input", updateProjects);
+}

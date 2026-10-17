@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projects built by Krishna while learning web development.">
+    <meta name="description" content="Explore Krishna's web, Android, API, and programming projects.">
     <title>Projects | Krishna</title>
     <link rel="stylesheet" href="style.css">
     <script src="krishna.js" defer></script>
 </head>
 <body>
     <header class="navbar">
-        <a href="index.html" class="logo">Krishna<span>.</span></a>
+        <a href="index.html" class="logo" aria-label="Krishna home">Krishna<span>.</span></a>
         <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -20,46 +20,155 @@
         </nav>
     </header>
 
-    <main class="page projects-page">
-        <p class="tag">WHAT I'VE BEEN BUILDING</p>
-        <h1>My <span>Projects</span></h1>
-        <p class="projects-intro">
-            I enjoy turning what I learn into real, useful websites.
-            Here is a project I have built as I grow my web development skills.
-        </p>
-
-        <article class="project-card">
-            <div>
-                <p class="project-label">PERSONAL PROJECT</p>
-                <h2>My Portfolio Website</h2>
-                <p>
-                    A personal website introducing me, sharing the skills I am learning,
-                    and giving visitors a way to get in touch. I designed it with a dark
-                    background, purple accents, and layouts that adapt to smaller screens.
-                </p>
-                <ul class="project-tags" aria-label="Technologies used">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Responsive design</li>
-                </ul>
-                <a class="btn primary" href="index.html">Visit my portfolio</a>
-            </div>
-
-            <div class="project-preview" aria-label="Illustration of the portfolio website">
-                <div class="preview-window">
-                    <div class="preview-dots" aria-hidden="true">
-                        <span></span><span></span><span></span>
-                    </div>
-                    <strong>Hi, I'm <span>Krishna</span></strong>
-                    <p>Student &amp; Web Developer</p>
-                    <div class="preview-line"></div>
-                    <div class="preview-line short"></div>
+    <main class="portfolio-projects">
+        <section class="projects-overview" aria-labelledby="projects-title">
+            <div class="projects-intro-copy">
+                <p class="projects-eyebrow"><span aria-hidden="true">✦</span> MY WORK</p>
+                <h1 id="projects-title">Projects</h1>
+                <p>Here are some of the projects I have built to apply my knowledge, solve real-world problems and explore new technologies. Each project helped me learn something new and improve as a developer.</p>
+                <div class="project-values">
+                    <article><span aria-hidden="true">&lt;/&gt;</span><div><h2>Real-World Practice</h2><p>Built projects to solve real problems and apply concepts.</p></div></article>
+                    <article><span aria-hidden="true">✦</span><div><h2>Continuous Learning</h2><p>Each project taught me new tools and better ways to code.</p></div></article>
+                    <article><span aria-hidden="true">♧</span><div><h2>User Focused</h2><p>Designed with real users in mind, focusing on simplicity and usability.</p></div></article>
+                    <article><span aria-hidden="true">➤</span><div><h2>Growth Mindset</h2><p>I keep building, learning and improving with every project.</p></div></article>
                 </div>
             </div>
-        </article>
+            <aside class="projects-focus">
+                <h2><span aria-hidden="true">◎</span> What You'll Find Here</h2>
+                <p>This section showcases web applications, tools and experiments. Each project includes an overview, key features, technologies used and what I learned while building it.</p>
+                <ul>
+                    <li>Project overview and problem statement</li>
+                    <li>Key features and functionality</li>
+                    <li>Technologies and tools used</li>
+                    <li>Challenges faced and how I solved them</li>
+                    <li>What I learned from the project</li>
+                </ul>
+            </aside>
+            <p class="projects-motto" aria-hidden="true">Ideas<br>Code<br>Build<br>Improve <span>↗</span></p>
+        </section>
 
-        <p class="coming-soon">More projects coming soon as I keep learning and building.</p>
+        <section class="projects-browser" aria-label="Browse projects">
+            <div class="projects-toolbar">
+                <div class="project-filters" role="group" aria-label="Filter projects">
+                    <button class="project-filter is-active" type="button" data-project-filter="all" aria-pressed="true">All Projects</button>
+                    <button class="project-filter" type="button" data-project-filter="web" aria-pressed="false">Web Apps</button>
+                    <button class="project-filter" type="button" data-project-filter="android" aria-pressed="false">Android Apps</button>
+                    <button class="project-filter" type="button" data-project-filter="tools" aria-pressed="false">Tools</button>
+                    <button class="project-filter" type="button" data-project-filter="game" aria-pressed="false">Games</button>
+                    <button class="project-filter" type="button" data-project-filter="mini" aria-pressed="false">Mini Projects</button>
+                </div>
+                <label class="project-search">
+                    <span aria-hidden="true">⌕</span>
+                    <span class="visually-hidden">Search projects</span>
+                    <input type="search" id="project-search" placeholder="Search projects..." autocomplete="off">
+                </label>
+            </div>
+
+            <p class="projects-empty" id="projects-empty" hidden>No projects match your search.</p>
+
+            <div class="project-grid">
+                <article class="showcase-project" data-categories="web" data-search="cookmitra recipe food web app cooking">
+                    <div class="showcase-preview preview-cookmitra" aria-hidden="true">
+                        <div class="mock-browser"><span></span><span></span><span></span><b>Cookmitra</b><i>Search recipes</i></div>
+                        <div class="mock-food-grid"><div>🥗</div><div>🍲</div><div>🍛</div></div>
+                        <strong>Find your next<br>favorite recipe</strong>
+                    </div>
+                    <div class="showcase-body">
+                        <div class="showcase-heading"><span class="project-number">01</span><div><h2>Cookmitra</h2><span class="project-type">Web App</span></div></div>
+                        <p class="showcase-description">A recipe web application that helps users discover, search and explore recipes from different cuisines, with clear recipe details and profiles.</p>
+                        <div class="showcase-details">
+                            <section><h3>Key Features</h3><ul><li>Search recipes by name or cuisine</li><li>Category-wise recipe filtering</li><li>Favorite recipes and profiles</li><li>Responsive recipe browsing</li></ul></section>
+                            <section><h3>Technologies</h3><ul class="project-tech"><li><img src="assets/skills/react.svg" alt="">React</li><li><img src="assets/skills/tailwindcss.svg" alt="">Tailwind CSS</li><li><img src="assets/skills/mongodb.svg" alt="">MongoDB</li></ul></section>
+                            <section><h3>What I Learned</h3><ul><li>Planning a user-focused interface</li><li>Working with search and categories</li><li>Building reusable UI components</li></ul></section>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="showcase-project" data-categories="android tools" data-search="kdsummarizer kd summarizer ai android notes summaries">
+                    <div class="showcase-preview preview-summarizer" aria-hidden="true">
+                        <div class="mock-phone"><b>KD Summarizer</b><span>Long notes, made simple</span><div class="mock-note-lines"></div><strong>Smart summary</strong><div class="mock-summary-lines"></div><i>Summarize notes</i></div>
+                        <div class="mock-spark">✦</div>
+                    </div>
+                    <div class="showcase-body">
+                        <div class="showcase-heading"><span class="project-number">02</span><div><h2>KD Summarizer</h2><span class="project-type">Android App</span></div></div>
+                        <p class="showcase-description">An AI-powered note summarizer that turns long notes into concise summaries and topic-wise MCQs to support focused study.</p>
+                        <div class="showcase-details">
+                            <section><h3>Key Features</h3><ul><li>Summarize long notes with AI</li><li>Generate topic-wise MCQs</li><li>Clean, simple interface</li><li>Lightweight study workflow</li></ul></section>
+                            <section><h3>Technologies</h3><ul class="project-tech"><li><img src="assets/skills/postman.svg" alt="">OpenAI API</li><li><img src="assets/skills/java.svg" alt="">Android</li><li>AI</li></ul></section>
+                            <section><h3>What I Learned</h3><ul><li>Integrating an AI text service</li><li>Handling API responses</li><li>Designing for mobile learning</li></ul></section>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="showcase-project" data-categories="web" data-search="portfolio website personal responsive">
+                    <div class="showcase-preview preview-portfolio" aria-hidden="true">
+                        <div class="mock-portfolio-nav"><b>Krishna<span>.</span></b><i>Home&nbsp;&nbsp; About&nbsp;&nbsp; Work</i></div>
+                        <div class="mock-portfolio-content"><small>STUDENT &amp; WEB DEVELOPER</small><strong>Hi, I'm<br><em>Krishna Dutt</em></strong><span>Building useful things with code.</span><i>Explore projects&nbsp; →</i></div>
+                        <div class="mock-portfolio-orb"></div>
+                    </div>
+                    <div class="showcase-body">
+                        <div class="showcase-heading"><span class="project-number">03</span><div><h2>Portfolio Website</h2><span class="project-type">Web App</span></div></div>
+                        <p class="showcase-description">A personal portfolio to introduce me, share my work and learning journey, and give visitors a way to get in touch.</p>
+                        <div class="showcase-details">
+                            <section><h3>Key Features</h3><ul><li>Modern responsive design</li><li>Smooth section navigation</li><li>Projects, skills and contact pages</li><li>Dark theme with purple accents</li></ul></section>
+                            <section><h3>Technologies</h3><ul class="project-tech"><li><img src="assets/skills/html5.svg" alt="">HTML</li><li><img src="assets/skills/css3.svg" alt="">CSS</li><li><img src="assets/skills/javascript.svg" alt="">JavaScript</li></ul></section>
+                            <section><h3>What I Learned</h3><ul><li>Responsive layouts and navigation</li><li>Accessible interface patterns</li><li>Iterating from visual feedback</li></ul></section>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="showcase-project" data-categories="game mini" data-search="snake game python pygame">
+                    <div class="showcase-preview preview-snake" aria-hidden="true">
+                        <div class="mock-game-top"><span>● ● ●</span><b>SNAKE</b><i>SCORE 120</i></div>
+                        <div class="mock-game-board"><span class="snake-segment s1"></span><span class="snake-segment s2"></span><span class="snake-segment s3"></span><span class="snake-segment s4"></span><span class="snake-segment s5"></span><span class="snake-food"></span></div>
+                        <p>Use arrow keys to move</p>
+                    </div>
+                    <div class="showcase-body">
+                        <div class="showcase-heading"><span class="project-number">04</span><div><h2>Snake Game</h2><span class="project-type">Game</span></div></div>
+                        <p class="showcase-description">A classic snake game built with Python and Pygame. Guide the snake, collect food and avoid collisions as the game speeds up.</p>
+                        <div class="showcase-details">
+                            <section><h3>Key Features</h3><ul><li>Simple keyboard controls</li><li>Score tracking</li><li>Increasing difficulty</li><li>Collision detection</li></ul></section>
+                            <section><h3>Technologies</h3><ul class="project-tech"><li><img src="assets/skills/python.svg" alt="">Python</li><li>Pygame</li></ul></section>
+                            <section><h3>What I Learned</h3><ul><li>Game loops and event handling</li><li>Managing collision states</li><li>Improving problem-solving skills</li></ul></section>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="showcase-project" data-categories="tools mini" data-search="recipe api cookmitra backend rest api">
+                    <div class="showcase-preview preview-api" aria-hidden="true">
+                        <div class="mock-api-top"><b>API Explorer</b><span>GET</span><i>/api/recipes</i></div>
+                        <div class="mock-api-code"><span>{</span><p>"recipe": <b>"Pasta Primavera"</b>,</p><p>"cuisine": <b>"Italian"</b>,</p><p>"readyIn": <strong>30</strong></p><span>}</span></div>
+                        <div class="mock-api-status">● 200 OK <i>application/json</i></div>
+                    </div>
+                    <div class="showcase-body">
+                        <div class="showcase-heading"><span class="project-number">05</span><div><h2>Recipe API</h2><span class="project-type">Backend</span></div></div>
+                        <p class="showcase-description">A REST API for managing recipes, including CRUD operations, search and filtering, built to support recipe applications.</p>
+                        <div class="showcase-details">
+                            <section><h3>Key Features</h3><ul><li>CRUD recipe operations</li><li>Search and filter endpoints</li><li>RESTful API design</li><li>Consistent error handling</li></ul></section>
+                            <section><h3>Technologies</h3><ul class="project-tech"><li><img src="assets/skills/nodejs.svg" alt="">Node.js</li><li><img src="assets/skills/express.svg" alt="">Express.js</li><li><img src="assets/skills/mongodb.svg" alt="">MongoDB</li></ul></section>
+                            <section><h3>What I Learned</h3><ul><li>Designing scalable API routes</li><li>Validating request data</li><li>Documenting endpoints</li></ul></section>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="showcase-project" data-categories="web mini" data-search="weather app api javascript">
+                    <div class="showcase-preview preview-weather" aria-hidden="true">
+                        <div class="mock-weather-top"><b>☀ Weather</b><span>⌕ New York</span></div>
+                        <div class="mock-weather-now"><span>New York</span><strong>24°</strong><i>Clear Sky</i><small>H 27° &nbsp; L 18°</small></div>
+                        <div class="mock-weather-days"><span>MON ☀</span><span>TUE ☁</span><span>WED ☀</span><span>THU ☀</span></div>
+                    </div>
+                    <div class="showcase-body">
+                        <div class="showcase-heading"><span class="project-number">06</span><div><h2>Weather App</h2><span class="project-type">Web App</span></div></div>
+                        <p class="showcase-description">A weather application that displays current conditions and forecasts with a clean, responsive interface.</p>
+                        <div class="showcase-details">
+                            <section><h3>Key Features</h3><ul><li>Search by city</li><li>Current conditions</li><li>Temperature and humidity</li><li>Responsive layout</li></ul></section>
+                            <section><h3>Technologies</h3><ul class="project-tech"><li><img src="assets/skills/javascript.svg" alt="">JavaScript</li><li>Weather API</li><li><img src="assets/skills/html5.svg" alt="">HTML &amp; CSS</li></ul></section>
+                            <section><h3>What I Learned</h3><ul><li>Fetching external API data</li><li>Handling loading and error states</li><li>Updating the UI dynamically</li></ul></section>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer>
