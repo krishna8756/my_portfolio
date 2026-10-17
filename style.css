@@ -597,31 +597,6 @@ footer {
 }
 
 @media (max-width: 680px) {
-    .navbar {
-        width: calc(100% - 28px);
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 9px;
-        border-radius: 24px;
-        margin: 10px auto 0;
-        padding: 10px 13px;
-    }
-
-    .navbar nav {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        gap: 4px;
-        width: 100%;
-    }
-
-    .navbar nav a {
-        flex: 0 1 auto;
-        padding: 3px 0;
-        font-size: clamp(0.72rem, 3vw, 0.84rem);
-        text-align: center;
-        white-space: nowrap;
-    }
-
     .page {
         padding: 42px 18px 24px;
     }
@@ -3142,7 +3117,7 @@ footer {
 }
 
 @media (max-width: 760px) {
-    .about-document .navbar {
+    .navbar:not(.home-navbar):not(.contact-navbar) {
         width: calc(100% - 28px);
         flex-direction: row;
         flex-wrap: wrap;
@@ -3154,11 +3129,11 @@ footer {
         background: rgba(8, 13, 31, 0.94);
     }
 
-    .about-document .navbar .logo {
+    .navbar:not(.home-navbar):not(.contact-navbar) .logo {
         font-size: 1.55rem;
     }
 
-    .about-document .navbar nav {
+    .navbar:not(.home-navbar):not(.contact-navbar) nav {
         flex: 1 1 100%;
         flex-wrap: nowrap;
         justify-content: space-between;
@@ -3166,10 +3141,11 @@ footer {
         width: 100%;
     }
 
-    .about-document .navbar nav a {
+    .navbar:not(.home-navbar):not(.contact-navbar) nav a {
         flex: 0 1 auto;
         padding: 3px 0;
         font-size: clamp(0.74rem, 3vw, 0.86rem);
+        text-align: center;
         white-space: nowrap;
     }
 
@@ -4004,11 +3980,14 @@ footer {
     height: 11.85%;
 }
 
-.contact-hotspot-email-address {
+.contact-hotspot-email-caption {
     position: absolute;
     top: 57%;
     left: 33%;
     width: 63%;
+    height: 2.7em;
+    display: block;
+    box-sizing: border-box;
     padding: 1px 2px;
     border-radius: 2px;
     color: #bec2df;
@@ -4091,7 +4070,7 @@ footer {
         height: 8.49%;
     }
 
-    .contact-hotspot-email-address {
+    .contact-hotspot-email-caption {
         top: 46%;
         left: 37%;
         width: 60%;
