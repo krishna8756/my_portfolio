@@ -3,76 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to Krishna's web development portfolio.">
-    <title>Krishna | Portfolio</title>
+    <meta name="description" content="Krishna Dutt Pandey — Computer Science student and web developer.">
+    <title>Krishna | Student &amp; Web Developer</title>
     <link rel="stylesheet" href="style.css">
     <script src="krishna.js" defer></script>
 </head>
-<body>
-    <header class="navbar">
-        <a href="index.html" class="logo">Krishna<span>.</span></a>
-        <nav aria-label="Main navigation">
-            <a href="index.html" class="active" aria-current="page">Home</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
+<body class="home-document">
+    <header class="navbar home-navbar">
+        <a href="index.html" class="logo" aria-label="Krishna home">Krishna<span>.</span></a>
+        <nav id="home-navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active" aria-current="page">About</a>
             <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
             <a href="contact.html">Contact</a>
         </nav>
+        <div class="nav-actions">
+            <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+                <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.2 15.2A8.6 8.6 0 0 1 8.8 3.8a8.7 8.7 0 1 0 11.4 11.4Z"/>
+                </svg>
+            </button>
+            <a class="talk-button" href="contact.html">Let's Talk <span aria-hidden="true">→</span></a>
+        </div>
+        <button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="home-navigation">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
     </header>
 
-    <main class="page home-page">
-        <p class="tag">WELCOME TO MY PORTFOLIO</p>
-        <section class="project-card home-hero">
-            <div>
-                <p class="project-label">STUDENT &amp; WEB DEVELOPER</p>
-                <h1>Hi, I'm <span>Krishna</span></h1>
-                <p>
-                    I am learning web development and programming, and I enjoy turning
-                    new ideas into websites. This portfolio is where I share what I am
-                    learning and the projects I build along the way.
+    <main class="home-page reference-home">
+        <section class="reference-hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="hero-eyebrow">ABOUT ME</p>
+
+                <h1 id="hero-title">
+                    <span class="heading-line">Hi, I'm</span>
+                    <span class="name-gradient">Krishna Dutt</span>
+                </h1>
+
+                <p class="hero-intro">
+                    A Computer Science student who loves coding, exploring new
+                    technologies and building projects. I enjoy learning, solving
+                    problems and creating real-world applications.
                 </p>
-                <div class="buttons">
-                    <a href="projects.html" class="btn primary">Explore my projects</a>
-                    <a href="about.html" class="btn secondary">More about me</a>
+
+                <div class="hero-actions">
+                    <a class="hero-button hero-button-primary" href="projects.html">
+                        <svg class="project-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM4 20a8 8 0 0 1 16 0v1H4z"/>
+                        </svg>
+                        View My Projects
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M5 12h14M13 6l6 6-6 6"/>
+                        </svg>
+                    </a>
+                    <a class="hero-button hero-button-secondary" href="contact.html">
+                        <svg class="connect-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m3 11 18-8-8 18-2-8-8-2Z"/>
+                            <path d="m11 13 5-5"/>
+                        </svg>
+                        Let's Connect <span aria-hidden="true">→</span>
+                    </a>
                 </div>
+
             </div>
-            <div class="project-preview home-preview" aria-label="Portfolio introduction card">
-                <div class="preview-window">
-                    <div class="preview-dots" aria-hidden="true">
-                        <span></span><span></span><span></span>
-                    </div>
-                    <div class="avatar">K</div>
-                    <strong>Learn. Build. <span>Grow.</span></strong>
-                    <p>One project at a time.</p>
-                    <div class="preview-line"></div>
-                    <div class="preview-line short"></div>
-                </div>
+
+            <div class="hero-visual">
+                <img
+                    class="hero-portrait"
+                    src="assets/reference-workspace.jpg"
+                    alt="Krishna at a neon-lit coding workstation, with code monitors and technology panels"
+                    fetchpriority="high"
+                >
+                <img
+                    class="hero-portrait-light"
+                    src="assets/reference-workspace-light.jpg"
+                    alt=""
+                    aria-hidden="true"
+                >
+            </div>
+            <div class="mobile-hero-actions" aria-label="Contact actions">
+                <span class="hero-button hero-button-primary resume-placeholder" aria-label="Download Resume: resume will be added later">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM4 20a8 8 0 0 1 16 0v1H4z"/>
+                    </svg>
+                    Download Resume
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 3v12m-5-5 5 5 5-5M5 20h14"/>
+                    </svg>
+                </span>
+                <a class="hero-button hero-button-secondary" href="contact.html">
+                    <svg class="connect-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m3 11 18-8-8 18-2-8-8-2Z"/>
+                        <path d="m11 13 5-5"/>
+                    </svg>
+                    Let's Connect <span aria-hidden="true">→</span>
+                </a>
             </div>
         </section>
 
-        <section class="home-links" aria-label="Explore the portfolio">
-            <a class="home-link-card" href="about.html">
-                <span class="project-label">01 / ABOUT</span>
-                <h2>My story</h2>
-                <p>A little about who I am and what I am working toward.</p>
-                <span class="text-link">Get to know me →</span>
-            </a>
-            <a class="home-link-card" href="skills.html">
-                <span class="project-label">02 / SKILLS</span>
-                <h2>What I'm learning</h2>
-                <p>The tools and concepts I am exploring as a developer.</p>
-                <span class="text-link">See my skills →</span>
-            </a>
-            <a class="home-link-card" href="projects.html">
-                <span class="project-label">03 / PROJECTS</span>
-                <h2>Things I've built</h2>
-                <p>Small steps, real projects, and more ideas to come.</p>
-                <span class="text-link">View projects →</span>
-            </a>
+        <section class="home-stats-section" aria-label="At a glance">
+            <ul class="hero-stats">
+                <li>
+                    <svg viewBox="0 0 32 32" aria-hidden="true">
+                        <path d="M4 7h9l3 3h12v15H4z"/>
+                    </svg>
+                    <span><strong>5+</strong><small>Projects</small></span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 32 32" aria-hidden="true">
+                        <path d="m11 10-6 6 6 6M21 10l6 6-6 6M18 7l-4 18"/>
+                    </svg>
+                    <span><strong>C / C++ / Java</strong><small>Languages</small></span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 32 32" aria-hidden="true">
+                        <circle cx="16" cy="16" r="12"/>
+                        <path d="M4 16h24M16 4a19 19 0 0 1 0 24M16 4a19 19 0 0 0 0 24M7.5 8.5h17M7.5 23.5h17"/>
+                    </svg>
+                    <span><strong>Web</strong><small>Development</small></span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 32 32" aria-hidden="true">
+                        <path d="m3 12 13-7 13 7-13 7-13-7Z"/>
+                        <path d="M8 15v7c5 4 11 4 16 0v-7M29 12v9"/>
+                    </svg>
+                    <span><strong>Always</strong><small>Learning</small></span>
+                </li>
+            </ul>
         </section>
     </main>
 
-    <footer>
+    <footer class="home-footer">
         <p id="copyright"></p>
     </footer>
 </body>
