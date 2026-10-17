@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the programming and web development skills Krishna is learning.">
+    <meta name="description" content="Explore Krishna's programming, web development, database, and software tools skills.">
     <title>Skills | Krishna</title>
     <link rel="stylesheet" href="style.css">
     <script src="krishna.js" defer></script>
 </head>
 <body>
     <header class="navbar">
-        <a href="index.html" class="logo">Krishna<span>.</span></a>
+        <a href="index.html" class="logo" aria-label="Krishna home">Krishna<span>.</span></a>
         <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -20,47 +20,126 @@
         </nav>
     </header>
 
-    <main class="page content-page">
-        <p class="tag">TOOLS &amp; TOPICS</p>
-        <h1>Skills I'm <span>Building</span></h1>
-        <p class="page-intro">
-            I am growing my skills through practice, study, and hands-on projects.
-        </p>
-
-        <section class="skill-grid" aria-label="Skills I am learning">
-            <article class="skill-card">
-                <span class="skill-number">01</span>
-                <h2>HTML</h2>
-                <p>Structuring clear, accessible web pages.</p>
-                <span class="skill-level">Learning &amp; practising</span>
-            </article>
-            <article class="skill-card">
-                <span class="skill-number">02</span>
-                <h2>CSS</h2>
-                <p>Creating layouts, visual styles, and responsive designs.</p>
-                <span class="skill-level">Learning &amp; practising</span>
-            </article>
-            <article class="skill-card">
-                <span class="skill-number">03</span>
-                <h2>JavaScript</h2>
-                <p>Exploring the basics of interactive web development.</p>
-                <span class="skill-level">Learning</span>
-            </article>
-            <article class="skill-card">
-                <span class="skill-number">04</span>
-                <h2>Java</h2>
-                <p>Learning programming fundamentals and object-oriented concepts.</p>
-                <span class="skill-level">Learning</span>
-            </article>
-            <article class="skill-card">
-                <span class="skill-number">05</span>
-                <h2>DSA</h2>
-                <p>Practising data structures, algorithms, and problem-solving.</p>
-                <span class="skill-level">Practising</span>
-            </article>
+    <main class="skills-page" aria-labelledby="skills-title">
+        <section class="skills-overview">
+            <div class="skills-intro">
+                <p class="skills-eyebrow"><span aria-hidden="true">★</span> MY SKILLS</p>
+                <h1 id="skills-title">Skills &amp; <span>Technologies</span></h1>
+                <p>Here are the tools and technologies I work with to build real-world projects, solve problems and keep learning every day.</p>
+                <div class="skills-stats" aria-label="Skills overview">
+                    <div class="skills-stat"><span class="skills-stat-icon" aria-hidden="true">&lt;/&gt;</span><p><strong>10+</strong><span>Technologies</span></p></div>
+                    <div class="skills-stat"><span class="skills-stat-icon" aria-hidden="true">▱</span><p><strong>4+</strong><span>Domains</span></p></div>
+                    <div class="skills-stat"><span class="skills-stat-icon" aria-hidden="true">◉</span><p><strong>3+</strong><span>Years Learning</span></p></div>
+                    <div class="skills-stat"><span class="skills-stat-icon" aria-hidden="true">∞</span><p><strong>Always</strong><span>Keep Exploring</span></p></div>
+                </div>
+            </div>
+            <aside class="skills-focus">
+                <h2><span class="skills-focus-icon" aria-hidden="true">✦</span> What I Focus On</h2>
+                <p>Building a strong foundation in core concepts, exploring new technologies and applying them in real-world projects.</p>
+                <ul>
+                    <li>Writing clean and efficient code</li>
+                    <li>Building modern and responsive web apps</li>
+                    <li>Solving data structures and algorithm problems</li>
+                    <li>Exploring new tools and technologies</li>
+                    <li>Continuously learning and improving</li>
+                </ul>
+            </aside>
+            <p class="skills-motto" aria-hidden="true">Better<br>Tools<br>Bigger<br>Dreams <span>↗</span></p>
         </section>
 
-        <p class="coming-soon">This list will grow as I keep learning and building.</p>
+        <div class="skills-groups">
+            <section class="skills-panel skills-panel-programming" aria-labelledby="programming-title">
+                <header class="skills-panel-heading">
+                    <span class="skills-panel-icon" aria-hidden="true">&lt;/&gt;</span>
+                    <div><h2 id="programming-title">Programming Languages</h2><p>Languages I use to write clean, efficient and scalable code.</p></div>
+                </header>
+                <ul class="skills-list">
+                    <li class="skills-item" style="--skill-level:85%"><span class="skills-item-icon"><img src="assets/skills/c.svg" alt=""></span><div class="skills-item-copy"><strong>C</strong><span>Data structures and system programming</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">85%</span></li>
+                    <li class="skills-item" style="--skill-level:80%"><span class="skills-item-icon"><img src="assets/skills/cplusplus.svg" alt=""></span><div class="skills-item-copy"><strong>C++</strong><span>Object oriented programming</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">80%</span></li>
+                    <li class="skills-item" style="--skill-level:75%"><span class="skills-item-icon"><img src="assets/skills/java.svg" alt=""></span><div class="skills-item-copy"><strong>Java</strong><span>OOP, multithreading and enterprise basics</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">75%</span></li>
+                    <li class="skills-item" style="--skill-level:80%"><span class="skills-item-icon"><img src="assets/skills/python.svg" alt=""></span><div class="skills-item-copy"><strong>Python</strong><span>Scripting, automation and problem solving</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">80%</span></li>
+                    <li class="skills-item" style="--skill-level:75%"><span class="skills-item-icon"><img src="assets/skills/javascript.svg" alt=""></span><div class="skills-item-copy"><strong>JavaScript</strong><span>Web development and interactive apps</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">75%</span></li>
+                </ul>
+            </section>
+
+            <section class="skills-panel skills-panel-web" aria-labelledby="web-title">
+                <header class="skills-panel-heading">
+                    <span class="skills-panel-icon" aria-hidden="true">▣</span>
+                    <div><h2 id="web-title">Web Development</h2><p>Technologies I use to build modern and responsive web applications.</p></div>
+                </header>
+                <ul class="skills-list">
+                    <li class="skills-item" style="--skill-level:90%"><span class="skills-item-icon"><img src="assets/skills/html5.svg" alt=""></span><div class="skills-item-copy"><strong>HTML</strong><span>Structure of web pages</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">90%</span></li>
+                    <li class="skills-item" style="--skill-level:85%"><span class="skills-item-icon"><img src="assets/skills/css3.svg" alt=""></span><div class="skills-item-copy"><strong>CSS</strong><span>Styling and responsive design</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">85%</span></li>
+                    <li class="skills-item" style="--skill-level:80%"><span class="skills-item-icon"><img src="assets/skills/tailwindcss.svg" alt=""></span><div class="skills-item-copy"><strong>Tailwind CSS</strong><span>Utility-first CSS framework</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">80%</span></li>
+                    <li class="skills-item" style="--skill-level:75%"><span class="skills-item-icon"><img src="assets/skills/react.svg" alt=""></span><div class="skills-item-copy"><strong>React</strong><span>Building modern user interfaces</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">75%</span></li>
+                    <li class="skills-item" style="--skill-level:70%"><span class="skills-item-icon"><img src="assets/skills/nodejs.svg" alt=""></span><div class="skills-item-copy"><strong>Node.js</strong><span>Backend development with JavaScript</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">70%</span></li>
+                    <li class="skills-item" style="--skill-level:70%"><span class="skills-item-icon"><img class="skills-logo-monochrome" src="assets/skills/express.svg" alt=""></span><div class="skills-item-copy"><strong>Express.js</strong><span>Building REST APIs</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">70%</span></li>
+                </ul>
+            </section>
+
+            <section class="skills-panel skills-panel-databases" aria-labelledby="databases-title">
+                <header class="skills-panel-heading">
+                    <span class="skills-panel-icon" aria-hidden="true">▤</span>
+                    <div><h2 id="databases-title">Databases</h2><p>Storing and managing data for applications.</p></div>
+                </header>
+                <ul class="skills-list">
+                    <li class="skills-item" style="--skill-level:75%"><span class="skills-item-icon"><img src="assets/skills/mysql.svg" alt=""></span><div class="skills-item-copy"><strong>MySQL</strong><span>Relational database management</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">75%</span></li>
+                    <li class="skills-item" style="--skill-level:70%"><span class="skills-item-icon"><img src="assets/skills/mongodb.svg" alt=""></span><div class="skills-item-copy"><strong>MongoDB</strong><span>NoSQL database for scalable apps</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">70%</span></li>
+                </ul>
+            </section>
+
+            <section class="skills-panel skills-panel-tools" aria-labelledby="tools-title">
+                <header class="skills-panel-heading">
+                    <span class="skills-panel-icon" aria-hidden="true">⌁</span>
+                    <div><h2 id="tools-title">Tools &amp; Platforms</h2><p>Tools I use to develop, test, deploy and manage projects efficiently.</p></div>
+                </header>
+                <ul class="skills-list">
+                    <li class="skills-item" style="--skill-level:85%"><span class="skills-item-icon"><img src="assets/skills/git.svg" alt=""></span><div class="skills-item-copy"><strong>Git</strong><span>Version control and collaboration</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">85%</span></li>
+                    <li class="skills-item" style="--skill-level:80%"><span class="skills-item-icon"><img class="skills-logo-monochrome" src="assets/skills/github.svg" alt=""></span><div class="skills-item-copy"><strong>GitHub</strong><span>Hosting and managing code repositories</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">80%</span></li>
+                    <li class="skills-item" style="--skill-level:90%"><span class="skills-item-icon"><img src="assets/skills/vscode.svg" alt=""></span><div class="skills-item-copy"><strong>VS Code</strong><span>Code editor and development environment</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">90%</span></li>
+                    <li class="skills-item" style="--skill-level:70%"><span class="skills-item-icon"><img src="assets/skills/postman.svg" alt=""></span><div class="skills-item-copy"><strong>Postman</strong><span>API testing and development</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">70%</span></li>
+                    <li class="skills-item" style="--skill-level:65%"><span class="skills-item-icon"><img src="assets/skills/linux.svg" alt=""></span><div class="skills-item-copy"><strong>Linux</strong><span>Command line and server management</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">65%</span></li>
+                    <li class="skills-item" style="--skill-level:70%"><span class="skills-item-icon"><img class="skills-logo-monochrome" src="assets/skills/vercel.svg" alt=""></span><div class="skills-item-copy"><strong>Vercel</strong><span>Deploy and host web applications</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">70%</span></li>
+                </ul>
+            </section>
+
+            <section class="skills-panel skills-panel-other" aria-labelledby="other-skills-title">
+                <header class="skills-panel-heading">
+                    <span class="skills-panel-icon" aria-hidden="true">⚙</span>
+                    <div><h2 id="other-skills-title">Other Skills</h2><p>Some other technologies and domains I'm exploring and improving.</p></div>
+                </header>
+                <ul class="skills-list">
+                    <li class="skills-item" style="--skill-level:75%"><span class="skills-item-icon"><img src="assets/skills/data-structures.svg" alt=""></span><div class="skills-item-copy"><strong>Data Structures &amp; Algorithms</strong><span>Problem solving and coding skills</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">75%</span></li>
+                    <li class="skills-item" style="--skill-level:80%"><span class="skills-item-icon"><img src="assets/skills/problem-solving.svg" alt=""></span><div class="skills-item-copy"><strong>Problem Solving</strong><span>Logical and analytical thinking</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">80%</span></li>
+                    <li class="skills-item" style="--skill-level:60%"><span class="skills-item-icon"><img src="assets/skills/system-design.svg" alt=""></span><div class="skills-item-copy"><strong>System Design</strong><span>Learning scalable system design concepts</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">60%</span></li>
+                    <li class="skills-item" style="--skill-level:60%"><span class="skills-item-icon"><img src="assets/skills/machine-learning.svg" alt=""></span><div class="skills-item-copy"><strong>Machine Learning</strong><span>Exploring AI and machine learning</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">60%</span></li>
+                    <li class="skills-item" style="--skill-level:50%"><span class="skills-item-icon"><img src="assets/skills/cloud.svg" alt=""></span><div class="skills-item-copy"><strong>Cloud Basics</strong><span>AWS, cloud deployment and services</span></div><span class="skills-meter"><i></i></span><span class="skills-percent">50%</span></li>
+                </ul>
+            </section>
+
+            <section class="skills-panel skills-panel-stack" aria-labelledby="stack-title">
+                <header class="skills-panel-heading">
+                    <span class="skills-panel-icon" aria-hidden="true">★</span>
+                    <div><h2 id="stack-title">Tech Stack at a Glance</h2><p>A quick overview of all the technologies I work with.</p></div>
+                </header>
+                <div class="skills-stack-strip" aria-label="Technology stack">
+                    <span><img src="assets/skills/c.svg" alt="">C</span><span><img src="assets/skills/cplusplus.svg" alt="">C++</span><span><img src="assets/skills/java.svg" alt="">Java</span><span><img src="assets/skills/python.svg" alt="">Python</span><span><img src="assets/skills/javascript.svg" alt="">JavaScript</span><span><img src="assets/skills/html5.svg" alt="">HTML</span><span><img src="assets/skills/css3.svg" alt="">CSS</span><span><img src="assets/skills/tailwindcss.svg" alt="">Tailwind CSS</span><span><img src="assets/skills/react.svg" alt="">React</span><span><img src="assets/skills/nodejs.svg" alt="">Node.js</span><span><img src="assets/skills/express.svg" alt="">Express.js</span><span><img src="assets/skills/mysql.svg" alt="">MySQL</span><span><img src="assets/skills/mongodb.svg" alt="">MongoDB</span><span><img src="assets/skills/git.svg" alt="">Git</span><span><img class="skills-logo-monochrome" src="assets/skills/github.svg" alt="">GitHub</span><span><img src="assets/skills/vscode.svg" alt="">VS Code</span><span><img src="assets/skills/postman.svg" alt="">Postman</span><span><img src="assets/skills/linux.svg" alt="">Linux</span><span><img class="skills-logo-monochrome" src="assets/skills/vercel.svg" alt="">Vercel</span><span>DSA</span>
+                </div>
+            </section>
+
+            <section class="skills-panel skills-panel-learning" aria-labelledby="learning-title">
+                <header class="skills-panel-heading">
+                    <span class="skills-panel-icon" aria-hidden="true">◧</span>
+                    <div><h2 id="learning-title">Currently Learning</h2><p>Technologies I'm currently exploring and want to master.</p></div>
+                </header>
+                <ul class="skills-learning-list">
+                    <li><span aria-hidden="true">▥</span><strong>Advanced DSA</strong><small>Improving problem-solving and competitive programming skills</small><i style="--learning-level:40%"></i></li>
+                    <li><span aria-hidden="true">❋</span><strong>Machine Learning</strong><small>Exploring ML algorithms and real-world applications</small><i style="--learning-level:30%"></i></li>
+                    <li><span aria-hidden="true">▤</span><strong>System Design</strong><small>Learning scalable system design concepts</small><i style="--learning-level:20%"></i></li>
+                    <li><span aria-hidden="true">☁</span><strong>Cloud &amp; DevOps</strong><small>Exploring deployment, CI/CD and cloud platforms</small><i style="--learning-level:30%"></i></li>
+                </ul>
+            </section>
+        </div>
     </main>
 
     <footer>
