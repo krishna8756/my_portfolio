@@ -19,34 +19,3 @@ if (themeToggle) {
             : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.2A8.6 8.6 0 0 1 8.8 3.8a8.7 8.7 0 1 0 11.4 11.4Z"/></svg>';
     });
 }
-
-const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
-const homeNavbar = document.querySelector(".home-navbar");
-
-if (mobileMenuToggle && homeNavbar) {
-    const closeMobileMenu = () => {
-        homeNavbar.classList.remove("menu-open");
-        mobileMenuToggle.setAttribute("aria-expanded", "false");
-        mobileMenuToggle.setAttribute("aria-label", "Open navigation menu");
-    };
-
-    mobileMenuToggle.addEventListener("click", () => {
-        const isOpen = homeNavbar.classList.toggle("menu-open");
-        mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
-        mobileMenuToggle.setAttribute(
-            "aria-label",
-            isOpen ? "Close navigation menu" : "Open navigation menu"
-        );
-    });
-
-    homeNavbar.querySelectorAll("nav a").forEach((link) => {
-        link.addEventListener("click", closeMobileMenu);
-    });
-
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && homeNavbar.classList.contains("menu-open")) {
-            closeMobileMenu();
-            mobileMenuToggle.focus();
-        }
-    });
-}
